@@ -31,6 +31,7 @@
     - dstat
     - iptraf
     - tmux
+    - zsh
 
 - name: Set hostname
   hostname: name={{common_hostname}}
