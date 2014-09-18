@@ -28,7 +28,7 @@
     - iotop
     - dstat
     - iptraf
-    - screen
+    - tmux
 
 - name: Set hostname
   hostname: name={{common_hostname}}
