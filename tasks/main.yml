@@ -5,6 +5,9 @@
 - name: Install common software
   apt: name={{item}} state=present
   with_items:
+    - console-data 
+    - unicode-data 
+    - language-pack-fr-base
     - htop
     - strace
     - make
@@ -26,9 +29,8 @@
 - name: Update hosts - add hostname to /etc/hosts
   lineinfile: 'line="127.0.0.1 {{common_hostname}}" dest=/etc/hosts state=present'
 
-- name: set locale to en_US.UTF-8
-  command: /usr/sbin/update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
-
+- name: set locale to fr_FR.UTF-8
+  command: /usr/sbin/update-locale LANG=fr_FR.UTF-8 LC_ALL=fr_FR.UTF-8
 
 - name: Set timezone variables
   copy: content={{common_timezone}} dest=/etc/timezone owner=root group=root mode=0644 backup=yes
