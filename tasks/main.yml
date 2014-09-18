@@ -11,9 +11,11 @@
 - name: Install common software
   apt: name={{item}} state=present
   with_items:
+    - software-properties-common
     - console-data 
     - unicode-data 
     - language-pack-fr-base
+    - language-pack-fr
     - htop
     - dfc  
     - strace
