@@ -9,6 +9,7 @@
     - unicode-data 
     - language-pack-fr-base
     - htop
+    - dfc  
     - strace
     - make
     - gcc
