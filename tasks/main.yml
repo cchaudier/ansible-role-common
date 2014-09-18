@@ -2,6 +2,12 @@
 - name: Update the apt cache
   apt: update-cache=yes
 
+- name: Upgrade all packages
+  apt: upgrade=yes
+
+- name: Upgrade dist
+  apt: upgrade=dist
+
 - name: Install common software
   apt: name={{item}} state=present
   with_items:
