@@ -18,12 +18,13 @@ Tools:
 - iotop
 - dstat
 - iptraf
-- screen
+- tmux
+- supervisor
 
 Role Variables
 --------------
 
-    common_timezone: 'Europe/Kiev'
+    common_timezone: 'Europe/Paris'
     common_hostname: 'ubuntu-server'
 
 
@@ -32,7 +33,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: webbylab.common, common_hostname: 'myserver', common_timezone: 'Europe/Kiev' }
+         - { role: webbylab.common, common_hostname: 'myserver', common_timezone: 'Europe/Paris' }
 
 License
 -------
@@ -42,4 +43,4 @@ MIT
 Author Information
 ------------------
 
-WebbyLab (http://webbylab.com)
+@c_chaudier (http://cchauier.fr)
